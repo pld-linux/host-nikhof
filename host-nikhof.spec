@@ -5,18 +5,6 @@ Version:	991529
 Release:	1
 License:	GPL
 Group:		Applications/Networking
-Group(cs):	Aplikace/Sí»ové
-Group(da):	Programmer/Netværks
-Group(de):	Applikationen/Netzwerkwesen
-Group(es):	Aplicaciones/Red
-Group(fr):	Applications/Réseau
-Group(it):	Applicazioni/Rete
-Group(no):	Applikasjoner/Nettverk
-Group(pl):	Aplikacje/Sieciowe
-Group(pt):	Aplicações/Rede
-Group(pt_BR):	Aplicações/Rede
-Group(ru):	ğÒÉÌÏÖÅÎÉÑ/óÅÔÅ×ÙÅ
-Group(sv):	Tillämpningar/Nätverk
 Source0:	ftp://ftp.nikhef.nl/pub/network/host_%{version}.tar.Z
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
