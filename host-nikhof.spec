@@ -1,8 +1,8 @@
 Summary:	host program (NIKHOF's version)
-Summary(pl):	Program host (wersja NIKHOF'a)
+Summary(pl):	Program host (wersja NIKHOF-a)
 Name:		host-nikhof
 Version:	991529
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Networking
 Source0:	ftp://ftp.nikhef.nl/pub/network/host_%{version}.tar.Z
@@ -39,21 +39,54 @@ Among the new features are:
  - Configurable default options via an environment variable.
  - Anticipate non-BIND behaviour during zone listings.
 
-And many more; see the manual page, the RELEASE NOTES, and the
+And many more; see the manual page, the RELEASE_NOTES, and the
 extensively documented code for details.
 
 %description -l pl
-Ca³kowicie nowa implementacja host'a z wieloma nowymi mo¿liwo¶ciami.
+Ca³kowicie nowa implementacja programu host - narzêdzia do odpytywania
+serwerów nazw, podobnego do nslookup czy dig - ale bardziej
+elastyczna i bogata w opcje.
+
+W¶ród nowych mo¿liwo¶ci s±:
+- obszerna obs³uga b³êdów
+- opcjonalna (bardzo) du¿a ilo¶æ informacji diagnostycznych
+- sprawdzanie przy listowaniu stref dodatkowych warunków, takich jak
+  nieautorytatywne rekordy sklejaj±ce czy wadliwe delegacje
+- sprawdzanie czy nazwy domen zwi±zane z hostami s± kanoniczne
+- kontrola spójno¶ci TTL przy listowaniu stref
+- rekurencyjne przechodzenie wydelegowanych stref do zadanego poziomu
+- prowadzenie statystyk rekordów i liczby hostów
+- opcja do sprawdzania odwrotnych odwzorowañ adresów hostów
+- opcja do porównywania rekordów SOA podstawowego i zapasowego serwera
+  nazw dla strefy w celu wykrycia anomalii typu zdesynchronizowane
+  numery seryjne lub innych rozbie¿no¶ci
+- rozpoznawanie nowych typów rekordów, opisanych w RFC 1183/1348
+- podstawowa obs³uga NSAP zgodna z RFC 1637
+- implementacja typów rekordów PX/GPOS zdefiniowanych w RFC 1664/1712
+- implementacja typu rekordu LOC zdefiniowanego w RFC 1876
+- rozpoznawanie rekordu AAAA zdefiniowanego w RFC 1884/1886
+- obs³uga nowych typów rekordów KEY/SIG/NXT/SRV (dopiero w drafcie)
+- obs³uga typu rekordu NAPTR, rozpoznawanie EID/NIMLOC/ATMA
+- obs³uga typu rekordu KX, rozpoznawanie CERT
+- dopuszczanie wielu argumentów z linii poleceñ lub standardowego
+  wej¶cia
+- konfigurowalne poprzez zmienn± ¶rodowiskow± opcje domy¶lne
+- przewidywanie odpowiedzi innych ni¿ od BIND-a przy listowaniu stref
+
+i wiele wiêcej - ca³o¶æ opisana w manualu, RELEASE_NOTES oraz szeroko
+udokumentowanym kodzie.
 
 %prep
 %setup -q -c host
 
 %build
-%{__make} CFLAGS="%{rpmcflags} -D_BSD_SOURCE" LDFLAGS="%{rpmldflags}"
+%{__make} \
+	CFLAGS="%{rpmcflags} -D_BSD_SOURCE" \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d   $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install host $RPM_BUILD_ROOT%{_bindir}/host-nikhof
 install host.1 $RPM_BUILD_ROOT%{_mandir}/man1/host-nikhof.1
