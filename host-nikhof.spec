@@ -57,13 +57,11 @@ install -d   $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install host $RPM_BUILD_ROOT%{_bindir}/host-nikhof
 install host.1 $RPM_BUILD_ROOT%{_mandir}/man1/host-nikhof.1
 
-gzip -9nf RELEASE_NOTES
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc RELEASE_NOTES
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
