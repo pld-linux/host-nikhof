@@ -5,8 +5,18 @@ Version:	991529
 Release:	1
 License:	GPL
 Group:		Applications/Networking
+Group(cs):	Aplikace/SÌªovÈ
+Group(da):	Programmer/NetvÊrks
 Group(de):	Applikationen/Netzwerkwesen
+Group(es):	Aplicaciones/Red
+Group(fr):	Applications/RÈseau
+Group(it):	Applicazioni/Rete
+Group(no):	Applikasjoner/Nettverk
 Group(pl):	Aplikacje/Sieciowe
+Group(pt):	AplicaÁıes/Rede
+Group(pt_BR):	AplicaÁıes/Rede
+Group(ru):	“…Ãœ÷≈Œ…—/Û≈‘≈◊Ÿ≈
+Group(sv):	Till‰mpningar/N‰tverk
 Source0:	ftp://ftp.nikhef.nl/pub/network/host_%{version}.tar.Z
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -54,16 +64,18 @@ Ca≥kowicie nowa implementacja host'a z wieloma nowymi moøliwo∂ciami.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d   $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+
 install host $RPM_BUILD_ROOT%{_bindir}/host-nikhof
 install host.1 $RPM_BUILD_ROOT%{_mandir}/man1/host-nikhof.1
+
+gzip -9nf RELEASE_NOTES
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc RELEASE_NOTES
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
