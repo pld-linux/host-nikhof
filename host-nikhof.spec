@@ -81,6 +81,7 @@ udokumentowanym kodzie.
 
 %build
 %{__make} \
+	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -D_BSD_SOURCE" \
 	LDFLAGS="%{rpmldflags}"
 
