@@ -1,5 +1,5 @@
 Summary:	host program (NIKHOF's version)
-Summary(pl):	Program host (wersja NIKHOF-a)
+Summary(pl.UTF-8):   Program host (wersja NIKHOF-a)
 Name:		host-nikhof
 Version:	991529
 Release:	2
@@ -42,38 +42,38 @@ Among the new features are:
 And many more; see the manual page, the RELEASE_NOTES, and the
 extensively documented code for details.
 
-%description -l pl
-Ca≥kowicie nowa implementacja programu host - narzÍdzia do odpytywania
-serwerÛw nazw, podobnego do nslookup czy dig - ale bardziej
+%description -l pl.UTF-8
+Ca≈Çkowicie nowa implementacja programu host - narzƒôdzia do odpytywania
+serwer√≥w nazw, podobnego do nslookup czy dig - ale bardziej
 elastyczna i bogata w opcje.
 
-W∂rÛd nowych moøliwo∂ci s±:
-- obszerna obs≥uga b≥ÍdÛw
-- opcjonalna (bardzo) duøa ilo∂Ê informacji diagnostycznych
-- sprawdzanie przy listowaniu stref dodatkowych warunkÛw, takich jak
-  nieautorytatywne rekordy sklejaj±ce czy wadliwe delegacje
-- sprawdzanie czy nazwy domen zwi±zane z hostami s± kanoniczne
-- kontrola spÛjno∂ci TTL przy listowaniu stref
+W≈õr√≥d nowych mo≈ºliwo≈õci sƒÖ:
+- obszerna obs≈Çuga b≈Çƒôd√≥w
+- opcjonalna (bardzo) du≈ºa ilo≈õƒá informacji diagnostycznych
+- sprawdzanie przy listowaniu stref dodatkowych warunk√≥w, takich jak
+  nieautorytatywne rekordy sklejajƒÖce czy wadliwe delegacje
+- sprawdzanie czy nazwy domen zwiƒÖzane z hostami sƒÖ kanoniczne
+- kontrola sp√≥jno≈õci TTL przy listowaniu stref
 - rekurencyjne przechodzenie wydelegowanych stref do zadanego poziomu
-- prowadzenie statystyk rekordÛw i liczby hostÛw
-- opcja do sprawdzania odwrotnych odwzorowaÒ adresÛw hostÛw
-- opcja do porÛwnywania rekordÛw SOA podstawowego i zapasowego serwera
+- prowadzenie statystyk rekord√≥w i liczby host√≥w
+- opcja do sprawdzania odwrotnych odwzorowa≈Ñ adres√≥w host√≥w
+- opcja do por√≥wnywania rekord√≥w SOA podstawowego i zapasowego serwera
   nazw dla strefy w celu wykrycia anomalii typu zdesynchronizowane
-  numery seryjne lub innych rozbieøno∂ci
-- rozpoznawanie nowych typÛw rekordÛw, opisanych w RFC 1183/1348
-- podstawowa obs≥uga NSAP zgodna z RFC 1637
-- implementacja typÛw rekordÛw PX/GPOS zdefiniowanych w RFC 1664/1712
+  numery seryjne lub innych rozbie≈ºno≈õci
+- rozpoznawanie nowych typ√≥w rekord√≥w, opisanych w RFC 1183/1348
+- podstawowa obs≈Çuga NSAP zgodna z RFC 1637
+- implementacja typ√≥w rekord√≥w PX/GPOS zdefiniowanych w RFC 1664/1712
 - implementacja typu rekordu LOC zdefiniowanego w RFC 1876
 - rozpoznawanie rekordu AAAA zdefiniowanego w RFC 1884/1886
-- obs≥uga nowych typÛw rekordÛw KEY/SIG/NXT/SRV (dopiero w drafcie)
-- obs≥uga typu rekordu NAPTR, rozpoznawanie EID/NIMLOC/ATMA
-- obs≥uga typu rekordu KX, rozpoznawanie CERT
-- dopuszczanie wielu argumentÛw z linii poleceÒ lub standardowego
-  wej∂cia
-- konfigurowalne poprzez zmienn± ∂rodowiskow± opcje domy∂lne
-- przewidywanie odpowiedzi innych niø od BIND-a przy listowaniu stref
+- obs≈Çuga nowych typ√≥w rekord√≥w KEY/SIG/NXT/SRV (dopiero w drafcie)
+- obs≈Çuga typu rekordu NAPTR, rozpoznawanie EID/NIMLOC/ATMA
+- obs≈Çuga typu rekordu KX, rozpoznawanie CERT
+- dopuszczanie wielu argument√≥w z linii polece≈Ñ lub standardowego
+  wej≈õcia
+- konfigurowalne poprzez zmiennƒÖ ≈õrodowiskowƒÖ opcje domy≈õlne
+- przewidywanie odpowiedzi innych ni≈º od BIND-a przy listowaniu stref
 
-i wiele wiÍcej - ca≥o∂Ê opisana w manualu, RELEASE_NOTES oraz szeroko
+i wiele wiƒôcej - ca≈Ço≈õƒá opisana w manualu, RELEASE_NOTES oraz szeroko
 udokumentowanym kodzie.
 
 %prep
