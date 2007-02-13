@@ -1,5 +1,5 @@
 Summary:	host program (NIKHOF's version)
-Summary(pl.UTF-8):   Program host (wersja NIKHOF-a)
+Summary(pl.UTF-8):	Program host (wersja NIKHOF-a)
 Name:		host-nikhof
 Version:	991529
 Release:	2
