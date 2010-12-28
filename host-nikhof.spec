@@ -44,8 +44,8 @@ extensively documented code for details.
 
 %description -l pl.UTF-8
 Całkowicie nowa implementacja programu host - narzędzia do odpytywania
-serwerów nazw, podobnego do nslookup czy dig - ale bardziej
-elastyczna i bogata w opcje.
+serwerów nazw, podobnego do nslookup czy dig - ale bardziej elastyczna
+i bogata w opcje.
 
 Wśród nowych możliwości są:
 - obszerna obsługa błędów
@@ -89,8 +89,8 @@ udokumentowanym kodzie.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install host $RPM_BUILD_ROOT%{_bindir}/host-nikhof
-install host.1 $RPM_BUILD_ROOT%{_mandir}/man1/host-nikhof.1
+cp -a host $RPM_BUILD_ROOT%{_bindir}/host-nikhof
+cp -a host.1 $RPM_BUILD_ROOT%{_mandir}/man1/host-nikhof.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -98,5 +98,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc RELEASE_NOTES
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/host-nikhof
+%{_mandir}/man1/host-nikhof.1*
